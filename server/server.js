@@ -1,8 +1,22 @@
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
+const Sequelize = require('sequelize')
 
-const PORT = 8000; // Change to ENV variable
+const PORT = process.env.PORT || 8000; // Change to ENV variable
+
+const sequelize = new Sequelize('database', 'username', 'password', {
+  host: 'localhost',
+  dialect: 'postgres',
+  pool: {
+    max: 5,
+    min: 0,
+    idle: 10000
+  }
+});
+
+
+
 
 app.use(bodyParser.json());
 
