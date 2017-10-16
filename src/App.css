@@ -9,7 +9,7 @@ body {
 }
 
 .App-header {
-  background-color: #555;
+  background-color: #943416;
   padding: 5px;
   color: white;
 }
@@ -18,11 +18,17 @@ body {
   font-size: 1.5em;
 }
 
+.App-title > a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
 .NavBar {
-  border: 2px black;
   position: fixed;
   top: 90px;
   width: 100%;
+  border: 1px solid lightgrey;
+  padding: 10px 0 10px 0;
 }
 
 .NavBar > ul {
@@ -33,6 +39,21 @@ body {
 }
 
 .nav-item {
-  margin: 0 20px 0 20px;
+  margin: 0 auto;
+  padding: 0 5px 0 5px;
   list-style: none;
+  border: 1px solid lightgrey;
+}
+
+.nav-item > a {
+  color: #213018;
+  text-decoration: none;
+}
+
+.Main {
+  position: fixed;
+  top: 140px;
+  width: 100%;
+  border: 1px solid lightgrey;
+
 }

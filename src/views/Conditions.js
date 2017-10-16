@@ -5,7 +5,7 @@ class Conditions extends Component {
   render() {
     return (
       <div className="conditions">
-        <h1>Conditions</h2>
+        <h1>Conditions</h1>
         <p>Hourly weather forecast - Arnold</p>
         <p>Hourly weather forecast - Dorrington</p>
         <p>Hourly weather forecast - Bear Valley</p>
