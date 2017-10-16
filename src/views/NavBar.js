@@ -4,7 +4,7 @@ class NavBar extends Component {
 
   render() {
     return (
-      <div className="nav-bar">
+      <div className="NavBar">
         <ul>
           <li class="nav-item">Instructions</li>
           <li class="nav-item">Activities</li>
