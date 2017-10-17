@@ -1,19 +1,18 @@
 body {
   margin: 0;
-  padding: 0;
   font-family: sans-serif;
-}
-
-.App {
-  text-align: center;
 }
 
 .App-header {
   background-color: #213018;
-  padding: 5px;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
 }
 
 .App-title {
+  padding-top: 5px;
   font-size: 1.5em;
   color: white;
 }
@@ -24,12 +23,8 @@ body {
 }
 
 .NavBar {
-  position: fixed;
-  top: 70px;
-  width: 100%;
-  padding: 10px 0 10px 0;
+  padding: 8px 0 8px 0;
   background-color: #943416;
-  /*border: 1px solid lightgrey;*/
 }
 
 .NavBar > ul {
@@ -41,7 +36,6 @@ body {
 
 .nav-item {
   margin: 0 auto;
-  padding: 0 5px 0 5px;
   list-style: none;
   /*border: 1px solid lightgrey;*/
 }
@@ -52,10 +46,11 @@ body {
 }
 
 main {
-  position: fixed;
-  top: 140px;
+  position: relative;
+  top: 100px;
   width: 100%;
-  border: 1px solid lightgrey;
+  border: 1px solid white;
+
 }
 
 h1 {
