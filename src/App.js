@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Switch, Route } from 'react-router-dom';
 import './App.css';
 import NavBar from './views/NavBar.js'
 import Activities from './views/Activities.js'
@@ -6,6 +7,7 @@ import Conditions from './views/Conditions.js'
 import Home from './views/Home.js'
 import Instructions from './views/Instructions.js'
 import Maintenance from './views/Maintenance.js'
+import Notes from './views/Notes.js'
 import Shopping from './views/Shopping.js'
 
 
@@ -13,17 +15,23 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        
         <header className="App-header">
           <h1 className="App-title"><a href="/">The Delore Cabin</a></h1>
         </header>
+        <NavBar/>
+        
+        <main>
+          <Switch>
+            <Route path="/" exact component={Home}/>
+            <Route path="/instructions" component={Instructions}/>
+            <Route path="/activities" component={Activities}/>
+            <Route path="/maintenance" component={Maintenance}/>
+            <Route path="/shopping" component={Shopping}/>
+            <Route path="/notes" component={Notes}/>
+            <Route path="/conditions" component={Conditions}/>
+          </Switch>
+        </main>
 
-        <NavBar />
-        
-        <div className="Main">
-          <Home/>
-        </div>
-        
       </div>
     );
   }
