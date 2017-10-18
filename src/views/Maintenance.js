@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Form from './Form.js';
 
 class Maintenance extends Component {
 
@@ -8,6 +9,7 @@ class Maintenance extends Component {
         <h1>Maintenance</h1>
         <p>This is the Maintenance List.</p>
         <p>Stuff that needs to get done.</p>
+        <Form formThing={["something around the cabin that needs love and care.","maintenance item"]} endpoint={"/maintenance"} />
       </div>
     )
   }

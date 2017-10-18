@@ -9,7 +9,7 @@ class Form extends Component {
       <div className="comment-form">
         <form action="http://localhost:8000/activities" method="post">
           <label htmlFor={thing}>{"What " + thing + " would you like to add?"}</label>
-          <textarea name={thing} required placeholder={`Enter  ${thingText}`} rows="15" cols="50"/>
+          <textarea name={thing} required placeholder={`Enter ${thingText}`} rows="15" cols="50"/>
           <input type="submit" value={`Add ${thing}`}/>
         </form>
       </div>
