@@ -63,3 +63,7 @@ div.comment-form {
 div.comment-form > form {
   display: block;
 }
+
+.cabin-photo {
+  width: 100%;
+}
