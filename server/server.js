@@ -5,7 +5,8 @@ const Sequelize = require('sequelize')
 
 const PORT = process.env.PORT || 8000; // Change to ENV variable
 
-const sequelize = new Sequelize('database', 'username', 'password', {
+// TODO: Change password and extract into env variable
+const sequelize = new Sequelize('cabin_db', 'cabin_db_user', 'password', {
   host: 'localhost',
   dialect: 'postgres',
   pool: {
@@ -16,27 +17,38 @@ const sequelize = new Sequelize('database', 'username', 'password', {
 });
 
 
-
-
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({
+  extended: true
+}))
 
+// TODO: implement basic http auth
+// app.post('/login', (req, res, next) => {});
 
-app.post('/login', (req, res, next) => {});
+// app.get('/activities', (req, res, next) => {});
+app.post('/activities', (req, res, next) => {
+  let value = req.body.activity;
+  console.log(value)
+  res.status(201).json({message: "/activities received a POST", activity: value}).end();
+});
+// app.delete('/activities/:id', (req, res, next) => {});
 
+// app.get('/maintenance', (req, res, next) => {});
+app.post('/maintenance', (req, res, next) => {
+  let value = req.body.maintenance;
+  console.log(value)
+  res.status(201).json({message: "/maintenance received a POST", maintenance_item: value}).end();
+});
+// app.delete('/maintenance/:id', (req, res, next) => {});
 
-app.get('/maintenance', (req, res, next) => {});
-app.post('/maintenance', (req, res, next) => {});
-app.delete('/maintenance/:id', (req, res, next) => {});
+// app.get('/shopping', (req, res, next) => {});
+// app.post('/shopping', (req, res, next) => {});
+// app.delete('/shopping/:id', (req, res, next) => {});
 
+// app.get('/notes', (req, res, next) => {});
+// app.post('/notes', (req, res, next) => {});
+// app.delete('/notes/:id', (req, res, next) => {});
 
-app.get('/shopping', (req, res, next) => {});
-app.post('/shopping', (req, res, next) => {});
-app.delete('/shopping/:id', (req, res, next) => {});
-
-
-app.get('/messages', (req, res, next) => {});
-app.post('/messages', (req, res, next) => {});
-app.delete('/messages/:id', (req, res, next) => {});
 
 
 app.listen(PORT, () => {

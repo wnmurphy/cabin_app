@@ -48,11 +48,18 @@ body {
 main {
   position: relative;
   top: 100px;
-  width: 100%;
   border: 1px solid white;
-
+  padding: 0 20px 0 20px;
 }
 
 h1 {
   color: #213018;
+}
+
+div.comment-form {
+  border: 1px solid lightgrey;
+}
+
+div.comment-form > form {
+  display: block;
 }
