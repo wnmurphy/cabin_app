@@ -9,7 +9,7 @@ class Shopping extends Component {
         <h1>Shopping</h1>
         <p>This is the Shopping List.</p>
         <p>Things to buy for the cabin.</p>
-        <Form formThing={["something we need to buy for the cabin.","shopping list item"]} endpoint={"/shopping"} />
+        <Form formThing={["something we need to buy for the cabin.","item"]} endpoint={"/shopping"} />
       </div>
     )
   }

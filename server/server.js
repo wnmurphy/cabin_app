@@ -42,7 +42,11 @@ app.post('/maintenance', (req, res, next) => {
 // app.delete('/maintenance/:id', (req, res, next) => {});
 
 // app.get('/shopping', (req, res, next) => {});
-// app.post('/shopping', (req, res, next) => {});
+app.post('/shopping', (req, res, next) => {
+  let value = req.body.item;
+  console.log(value)
+  res.status(201).json({message: "/shopping received a POST", item: value}).end();
+});
 // app.delete('/shopping/:id', (req, res, next) => {});
 
 // app.get('/notes', (req, res, next) => {});
