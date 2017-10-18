@@ -35,9 +35,9 @@ app.post('/activities', (req, res, next) => {
 
 // app.get('/maintenance', (req, res, next) => {});
 app.post('/maintenance', (req, res, next) => {
-  let value = req.body.maintenance;
+  let value = req.body.task;
   console.log(value)
-  res.status(201).json({message: "/maintenance received a POST", maintenance_item: value}).end();
+  res.status(201).json({message: "/maintenance received a POST", task: value}).end();
 });
 // app.delete('/maintenance/:id', (req, res, next) => {});
 

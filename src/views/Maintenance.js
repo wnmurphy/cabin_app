@@ -9,7 +9,7 @@ class Maintenance extends Component {
         <h1>Maintenance</h1>
         <p>This is the Maintenance List.</p>
         <p>Stuff that needs to get done.</p>
-        <Form formThing={["something around the cabin that needs love and care.","maintenance item"]} endpoint={"/maintenance"} />
+        <Form formThing={["something around the cabin that needs love and care.","task"]} endpoint={"/maintenance"} />
       </div>
     )
   }

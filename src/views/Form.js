@@ -5,9 +5,10 @@ class Form extends Component {
   render() {
     let thingText = this.props.formThing[0];
     let thing = this.props.formThing[1];
+    let endpoint = this.props.endpoint;
     return (
       <div className="comment-form">
-        <form action="http://localhost:8000/activities" method="post">
+        <form action={`http://localhost:8000${endpoint}`} method="post">
           <label htmlFor={thing}>{"What " + thing + " would you like to add?"}</label>
           <textarea name={thing} required placeholder={`Enter ${thingText}`} rows="15" cols="50"/>
           <input type="submit" value={`Add ${thing}`}/>
