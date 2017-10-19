@@ -6,11 +6,13 @@ class Conditions extends Component {
     return (
       <div className="conditions">
         <h1>Conditions</h1>
-        <p>Hourly weather forecast - Arnold</p>
-        <p>Hourly weather forecast - Dorrington</p>
-        <p>Hourly weather forecast - Bear Valley</p>
-        <p>Local webcams.</p>
-        <p>Drone video of Lake Alpine.</p>
+        <h2>Murphy's</h2>
+        <div class="powr-weather" id="dc68152b_1508395387"></div>
+        <h2>Dorrington</h2>
+        <div class="powr-weather" id="1e7bfe35_1508394966"></div>
+        <h2>Lake Alpine/Bear Valleu</h2>
+        <div class="powr-weather" id="789974a1_1508395239"></div>
+        <h2>Local webcams.</h2>
       </div>
     )
   }
