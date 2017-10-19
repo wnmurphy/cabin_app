@@ -16,7 +16,7 @@ class Home extends Component {
           <li>general notes</li>
           <li>info on current conditions (weather forecasts, local webcams, etc.)</li>
         </ul>
-        <img className="cabin-photo" src={cabin}/>
+        <img className="cabin-photo" src={cabin} alt="The cabin in winter."/>
       </div>
     )
   }
