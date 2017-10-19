@@ -3,6 +3,13 @@ import Form from './Form.js';
 
 class Maintenance extends Component {
 
+  constructor() {
+    super()
+    this.state = {
+      tasks : []
+    }
+  }
+
   render() {
     return (
       <div className="maintenance">

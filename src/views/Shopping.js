@@ -3,6 +3,13 @@ import Form from './Form.js';
 
 class Shopping extends Component {
 
+  constructor() {
+    super()
+    this.state = {
+      items : []
+    }
+  }
+
   render() {
     return (
       <div className="shopping">

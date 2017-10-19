@@ -24,6 +24,16 @@ app.use(bodyParser.urlencoded({
 // TODO: implement basic http auth
 // app.post('/login', (req, res, next) => {});
 
+app.all('*', function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header('Access-Control-Allow-Methods', 'GET, PUT, POST, DELETE, OPTIONS');
+  res.header('Access-Control-Allow-Headers', 'Content-Type, Accept, X-Access-Token, X-Key');
+  if (req.method == 'OPTIONS') {
+    res.status(200).end();
+  } else {
+    next();
+  }
+});
 
 let db = {
   maintenance: [],
@@ -42,6 +52,7 @@ app.post('/activities', (req, res, next) => {
 });
 // app.delete('/activities/:id', (req, res, next) => {});
 
+
 app.get('/maintenance', (req, res, next) => {
   let maintenanceList = db.maintenance;
   res.status(200).json(maintenanceList).end();
@@ -52,6 +63,7 @@ app.post('/maintenance', (req, res, next) => {
   res.status(201).json({message: "/maintenance received a POST", task: value}).end();
 });
 // app.delete('/maintenance/:id', (req, res, next) => {});
+
 
 app.get('/shopping', (req, res, next) => {
   let shoppingList = db.shopping;
