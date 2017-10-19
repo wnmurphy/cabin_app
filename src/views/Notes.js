@@ -9,6 +9,9 @@ class Notes extends Component {
         <p>This is the Notes List.</p>
         <p>General notes about the cabin.</p>
         
+        <h2>Plowing the driveway</h2>
+        <p>If it's been a snowy winter, you may need to have the driveway plowed before you come up.</p>
+
         <h2>Internet</h2>
         <p>The neighborhood is wired for internet; the access point is <code>xfinitywifi</code>.</p>
         <p>If you have a Comcast account, then you can use your account login.</p>

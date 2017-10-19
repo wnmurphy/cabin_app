@@ -16,7 +16,6 @@ const sequelize = new Sequelize('cabin_db', 'cabin_db_user', 'password', {
   }
 });
 
-
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
   extended: true
@@ -25,26 +24,42 @@ app.use(bodyParser.urlencoded({
 // TODO: implement basic http auth
 // app.post('/login', (req, res, next) => {});
 
-// app.get('/activities', (req, res, next) => {});
+
+let db = {
+  maintenance: [],
+  activities: [],
+  shopping: []
+};
+
+app.get('/activities', (req, res, next) => {
+  let activityList = db.activities;
+  res.status(200).json(activityList).end();
+});
 app.post('/activities', (req, res, next) => {
   let value = req.body.activity;
-  console.log(value)
+  db.activities.push(value);
   res.status(201).json({message: "/activities received a POST", activity: value}).end();
 });
 // app.delete('/activities/:id', (req, res, next) => {});
 
-// app.get('/maintenance', (req, res, next) => {});
+app.get('/maintenance', (req, res, next) => {
+  let maintenanceList = db.maintenance;
+  res.status(200).json(maintenanceList).end();
+});
 app.post('/maintenance', (req, res, next) => {
   let value = req.body.task;
-  console.log(value)
+  maintenance.push(value);
   res.status(201).json({message: "/maintenance received a POST", task: value}).end();
 });
 // app.delete('/maintenance/:id', (req, res, next) => {});
 
-// app.get('/shopping', (req, res, next) => {});
+app.get('/shopping', (req, res, next) => {
+  let shoppingList = db.shopping;
+  res.status(200).json(shoppingList).end();
+});
 app.post('/shopping', (req, res, next) => {
   let value = req.body.item;
-  console.log(value)
+  shopping.push(value);
   res.status(201).json({message: "/shopping received a POST", item: value}).end();
 });
 // app.delete('/shopping/:id', (req, res, next) => {});
