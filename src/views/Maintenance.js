@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Form from './Form.js';
+import axios from 'axios';
+
 
 class Maintenance extends Component {
 
@@ -10,6 +12,15 @@ class Maintenance extends Component {
     }
   }
 
+  componentDidMount() {
+    axios.get(`http://localhost:8000/maintenance`)
+      .then(res => {
+        const tasks = res.data;
+        console.log(tasks);
+        this.setState({ tasks });
+      });
+  } 
+
   render() {
     return (
       <div className="maintenance">
@@ -17,6 +28,11 @@ class Maintenance extends Component {
         <p>This is the Maintenance List.</p>
         <p>Stuff that needs to get done.</p>
         <Form formThing={["something around the cabin that needs love and care.","task"]} endpoint={"/maintenance"} />
+        <div className="maintenance-list">
+          {this.state.tasks.map((task, idx) =>
+            <div key={idx}>{task}</div>
+          )}
+        </div>
       </div>
     )
   }

@@ -59,7 +59,7 @@ app.get('/maintenance', (req, res, next) => {
 });
 app.post('/maintenance', (req, res, next) => {
   let value = req.body.task;
-  maintenance.push(value);
+  db.maintenance.push(value);
   res.status(201).json({message: "/maintenance received a POST", task: value}).end();
 });
 // app.delete('/maintenance/:id', (req, res, next) => {});
@@ -71,7 +71,7 @@ app.get('/shopping', (req, res, next) => {
 });
 app.post('/shopping', (req, res, next) => {
   let value = req.body.item;
-  shopping.push(value);
+  db.shopping.push(value);
   res.status(201).json({message: "/shopping received a POST", item: value}).end();
 });
 // app.delete('/shopping/:id', (req, res, next) => {});

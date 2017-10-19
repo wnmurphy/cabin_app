@@ -6,7 +6,7 @@ import Conditions from './views/Conditions.js'
 import Home from './views/Home.js'
 import Instructions from './views/Instructions.js'
 import Maintenance from './views/Maintenance.js'
-import Notes from './views/Notes.js'
+import Info from './views/Info.js'
 import Shopping from './views/Shopping.js'
 import './App.css';
 
@@ -28,7 +28,7 @@ class App extends Component {
             <Route path="/activities" component={Activities}/>
             <Route path="/maintenance" component={Maintenance}/>
             <Route path="/shopping" component={Shopping}/>
-            <Route path="/notes" component={Notes}/>
+            <Route path="/info" component={Info}/>
             <Route path="/conditions" component={Conditions}/>
           </Switch>
         </main>
