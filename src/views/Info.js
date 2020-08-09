@@ -18,6 +18,9 @@ class Info extends Component {
         <h2>Laundry</h2>
         <p>Nope. You'll probably want to bring your own towel too. There are towels up here, but like the sheets they aren't often used or laundered.</p>
 
+        <h2>Plumbing</h2>
+        <p>Plese don't let any food go down the kitchen drain. Before you leave, empty out the metal trap into the garbage or toss it outside.</p>
+
         <h2>Plowing the Driveway</h2>
         <p>If it's been a snowy winter, you may need to call ahead and have the driveway plowed before you come up.</p>
         <p>Be advised that it has happened in the past that Murietta's Roost was not plowed during snow season. If this happens, you'll have to hike in about 80 yards to the end of the street.</p>

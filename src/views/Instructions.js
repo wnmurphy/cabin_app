@@ -46,23 +46,23 @@ class Instructions extends Component {
 
         <p>Closing the cabin is basically the same process as opening, but in reverse.</p>
 
-        <h3>1. Turn off the water heater.</h3>
+        <h3>1. Clean up.</h3>
+        <p>Wash the dishes. Empty the food bits from the drain trap. Sweep/mop the floor, and clean surfaces like the kitchen counter, dining table, and stove.</p>
 
-        <h3>2. Go outside and flip the drain/water supply faucet handles in the green box.</h3>
+        <h3>2. Turn off the water heater.</h3>
 
-        <h3>3. Go inside and open all of the hot and cold faucets.</h3>
+        <h3>3. Go outside and flip the drain/water supply faucet handles in the green box.</h3>
 
-        <h3>4. Open the water heater drains.</h3>
+        <h3>4. Go inside and open all of the hot and cold faucets.</h3>
+
+        <h3>5. Open the water heater drains.</h3>
         <p>The one on the floor drains to the driveway hose, and the one at the wall drains underneath the cabin.</p>
 
-        <h3>5. Pour half a cup of antifreeze in each of the drains.</h3>
+        <h3>6. Pour half a cup of antifreeze in each of the drains.</h3>
         <p>Water left in the U-traps of the pipes can expand and crack the pipes if temperatures get below freezing.</p>
         <p>The antifreeze should be on the floor by the wall in the kitchen.</p>
         <p>Pour some in: kitchen sink drain, shower drain, bathroom sink drain, toilet bowl, toilet reservoir.</p>
         <p>Take care not to splash it on surrounding surfaces.</p>
-
-        <h3>6. Clean up.</h3>
-        <p>Sweep/mop the floor, and clean surfaces like the kitchen counter, dining table, and stove.</p>
 
         <h3>7. Turn the power off.</h3>
         

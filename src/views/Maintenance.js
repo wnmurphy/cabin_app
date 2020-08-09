@@ -13,7 +13,7 @@ class Maintenance extends Component {
   }
 
   componentDidMount() {
-    axios.get(`http://localhost:8000/maintenance`)
+    axios.get(`http://localhost:3000/maintenance`)
       .then(res => {
         const tasks = res.data;
         console.log(tasks);
